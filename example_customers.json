@@ -1,0 +1,47 @@
+[
+    {
+        "customer_name": "Fuat Sungur",
+        "email": "afsungur@gmail.com",
+        "balance": 760,
+        "addresses": [
+            {
+                "type": "home",
+                "address": "Jumeirah Village Triangle, Dubai"
+            },
+            {
+                "type": "work",
+                "address": "Dubai Internet City"
+            }
+        ]
+    },
+    {
+        "customer_name": "John Wick",
+        "email": "john.wick@gmail.com",
+        "balance": 999,
+        "addresses": [
+            {
+                "type": "home",
+                "address": "Brooklyn, New York City"
+            },
+            {
+                "type": "work",
+                "address": "Manhattan, New York City"
+            }
+        ]
+    },
+    {
+        "customer_name": "Walter White",
+        "email": "walter.white@gmail.com",
+        "balance": 99999,
+        "addresses": [
+            {
+                "type": "home",
+                "address": "Albuquerque"
+            },
+            {
+                "type": "work",
+                "address": "New Mexico"
+            }
+        ]
+    }
+]
