@@ -234,3 +234,19 @@ MongoServerError: Unrecognized pipeline stage name: '$group'
 db002> 
 ```
 
+## 11. Delete one record from the collection
+
+```javascript
+db002> db.customers.deleteOne({"customer_name":"Fuat Sungur"})
+{ acknowledged: true, deletedCount: 1 }
+db002> 
+```
+
+## 12. Delete all the records in the collection
+
+```javascript
+db002> db.customers.deleteMany({})
+{ acknowledged: true, deletedCount: 3 }
+db002> 
+```
+
