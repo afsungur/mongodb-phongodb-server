@@ -92,6 +92,8 @@ def replyto_op_msg(payload_document, request_id):
                     response_doc = {'cursor': {'firstBatch': docs, 'id': 0, 'ns': 'test.aaa'}, 'ok': 1.0}
                 else:
                     response_doc = { "ok": 0, "code":"001", "errmsg": f"Unrecognized pipeline stage name: '{stage_name}'"}
+                # elif (stage_name) == "$sql":
+                # elif (stage_name) == "$search":
 
 
         elif 'insert' in actual_payload:

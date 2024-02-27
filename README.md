@@ -1,8 +1,9 @@
 # MongoDB API Compatible Fake Database Server
 
-PhongoDB, implemented in Python, is a MongoDB API Compatible Fake Database Server that implements the MongoDB Wire Protocol. 
+PhongoDB, implemented in Python, is a MongoDB API Compatible Fake Database Server that implements the MongoDB Wire Protocol.
 
 Tested in below environment:
+
 - mongosh 2.0.2
 - Python 3.9.2
 
@@ -12,22 +13,23 @@ After you clone the repository:
   - Make sure server is running
 - Then connect from `mongosh`
   - `$ mongosh --port 27017`
- 
+
  It's supported:
- - Very simple `insertMany()` and `insertOne()`
- - Very simple `find()` command with equality match (without `$eq` operator)
- - Very simple `updateOne()` command with `$set` operator
- - Very simple `aggregate([])` command with `$match` stage with equality (without `$eq` operator)
- - Very simple `deleteOne()` and `deleteMany()`
+
+- Very simple `insertMany()` and `insertOne()`
+- Very simple `find()` command with equality match (without `$eq` operator)
+- Very simple `updateOne()` command with `$set` operator
+- Very simple `aggregate([])` command with `$match` stage with equality (without `$eq` operator)
+- Very simple `deleteOne()` and `deleteMany()`
 
 # How to run it
 
 ## 1. Run the server and then Run `mongosh`
 
-On the left hand side of the screen, you see that `phongo_daemon.py` was run with the server port number. After we run the server, on the right hand side you see that we connected to the server from `mongosh`. 
+On the left hand side of the screen, you see that `phongo_daemon.py` was run with the server port number. After we run the server, on the right hand side you see that we connected to the server from `mongosh`.
 ![](images/001.png)
 
-## 2. Switch to the desired database 
+## 2. Switch to the desired database
 
 Switch to the database.
 
@@ -39,7 +41,7 @@ db002>
 
 ## 3. Insert the example json records into the customer collection
 
-- Copy the content of `example_customers.json` file 
+- Copy the content of `example_customers.json` file
 - Insert it into `customers` collection as shown in the below.
 
 ```javascript
@@ -104,6 +106,7 @@ Then we should receive the following message from the server:
   }
 }
 ```
+After that you can verify that it's persisted on the disk under the `datafiles/db002/customers.json` file. 
 
 ## 4. Run a simple `find` command
 
@@ -124,7 +127,7 @@ db002> db.customers.find({"customer_name":"Walter White"})
 db002> 
 ```
 
-## 5. Insert a new record with write concern options 
+## 5. Insert a new record with write concern options
 
 Insert a new record into the customers collection with `writeConcern` option.
 
@@ -249,4 +252,3 @@ db002> db.customers.deleteMany({})
 { acknowledged: true, deletedCount: 3 }
 db002> 
 ```
-
